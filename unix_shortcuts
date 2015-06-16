@@ -1,0 +1,25 @@
+###############################################
+vim 
+###############################################
+:%s/search_text/\U&/gc -- capitalize matches (& - match the entire matched text)
+                \L
+
+:g/^$/d - delete all newlines
+
+###############################################
+shell
+###############################################
+'find' command:
+  find . -name "PTRN" -exec mv {} DESTINATION \;
+  find . -name "PTRN" -exec cp {} DESTINATION \;
+command substitution: rm `CMD`
+example:
+   find . -name "PTRN" -exec mv {} filename.`env | grep -w USER | cut -d "=" -f2`.ext
+
+HTTP request from CLI:
+  curl -X GET http://172.25.208.51:16004/api/notify
+
+Add route:
+  sudo route add -net 15.1.0.0/16 gw 14.1.51.7 dev eth2
+
+  
